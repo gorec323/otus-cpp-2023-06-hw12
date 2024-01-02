@@ -1,0 +1,4 @@
+<map id="fashion::LogregClassifier" name="fashion::LogregClassifier">
+<area shape="rect" id="node1" title="The LogregClassifier class Файл классификатора для логистической регрессии" alt="" coords="6,80,189,107"/>
+<area shape="rect" id="node2" href="$classfashion_1_1IBinaryClassifier.html" title="The IBinaryClassifier class Интерфейс класса классификатора" alt="" coords="5,5,189,32"/>
+</map>

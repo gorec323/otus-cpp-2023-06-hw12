@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>fashio_mnist: Исходный файл /home/runner/work/otus-cpp-2023-06-hw12/otus-cpp-2023-06-hw12/libs/classifiers/include/ibinaryclassifier.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">fashio_mnist
+   &#160;<span id="projectnumber">0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_07c76cae1e467088d2cdd669606415cd.html">classifiers</a></li><li class="navelem"><a class="el" href="dir_56ff3f7c0425870392bf8927f9b0f292.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ibinaryclassifier.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ibinaryclassifier_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespacefashion.html">    5</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacefashion.html">fashion</a> {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classfashion_1_1IBinaryClassifier.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfashion_1_1IBinaryClassifier.html">IBinaryClassifier</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classfashion_1_1IBinaryClassifier.html#aa261dad7269d4f5a327369b31fa57b27">   13</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classfashion_1_1IBinaryClassifier.html#aa261dad7269d4f5a327369b31fa57b27">FeaturesType</a> = std::vector&lt;float&gt;;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classfashion_1_1IBinaryClassifier.html#a177cfa36d8e72ef8806a3a6908fe03c9">   15</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classfashion_1_1IBinaryClassifier.html#a177cfa36d8e72ef8806a3a6908fe03c9">~IBinaryClassifier</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classfashion_1_1IBinaryClassifier.html#add9b95f475be90896faabe66a87798a8">   17</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classfashion_1_1IBinaryClassifier.html#add9b95f475be90896faabe66a87798a8">predictProbability</a>(<span class="keyword">const</span> <a class="code" href="classfashion_1_1IBinaryClassifier.html#aa261dad7269d4f5a327369b31fa57b27">FeaturesType</a> &amp;) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="ttc" id="aclassfashion_1_1IBinaryClassifier_html"><div class="ttname"><a href="classfashion_1_1IBinaryClassifier.html">fashion::IBinaryClassifier</a></div><div class="ttdoc">The IBinaryClassifier class Интерфейс класса классификатора</div><div class="ttdef"><b>Definition:</b> ibinaryclassifier.hpp:11</div></div>
+<div class="ttc" id="aclassfashion_1_1IBinaryClassifier_html_a177cfa36d8e72ef8806a3a6908fe03c9"><div class="ttname"><a href="classfashion_1_1IBinaryClassifier.html#a177cfa36d8e72ef8806a3a6908fe03c9">fashion::IBinaryClassifier::~IBinaryClassifier</a></div><div class="ttdeci">virtual ~IBinaryClassifier()=default</div></div>
+<div class="ttc" id="aclassfashion_1_1IBinaryClassifier_html_aa261dad7269d4f5a327369b31fa57b27"><div class="ttname"><a href="classfashion_1_1IBinaryClassifier.html#aa261dad7269d4f5a327369b31fa57b27">fashion::IBinaryClassifier::FeaturesType</a></div><div class="ttdeci">std::vector&lt; float &gt; FeaturesType</div><div class="ttdef"><b>Definition:</b> ibinaryclassifier.hpp:13</div></div>
+<div class="ttc" id="aclassfashion_1_1IBinaryClassifier_html_add9b95f475be90896faabe66a87798a8"><div class="ttname"><a href="classfashion_1_1IBinaryClassifier.html#add9b95f475be90896faabe66a87798a8">fashion::IBinaryClassifier::predictProbability</a></div><div class="ttdeci">virtual float predictProbability(const FeaturesType &amp;) const =0</div></div>
+<div class="ttc" id="anamespacefashion_html"><div class="ttname"><a href="namespacefashion.html">fashion</a></div><div class="ttdef"><b>Definition:</b> ibinaryclassifier.hpp:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
