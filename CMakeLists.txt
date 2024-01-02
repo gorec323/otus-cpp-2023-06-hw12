@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.6)
 set(PATCH_VERSION 1 CACHE INTERNAL "Patch version. Default = 1")
 set(PROJECT_VERSION 0.0.${PATCH_VERSION} CACHE INTERNAL "Application version" FORCE)
 
-project(myapplication VERSION ${PROJECT_VERSION} LANGUAGES CXX)
+project(fashio_mnist VERSION ${PROJECT_VERSION} LANGUAGES CXX)
 
 configure_file(
     version.h.in
@@ -37,6 +37,11 @@ PRIVATE
     ${CMAKE_BINARY_DIR}
 )
 
+target_link_libraries(${PROJECT_NAME}
+PRIVATE
+    fashionclassifiers
+)
+
 if (UNIX)
     install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 
@@ -44,7 +49,7 @@ if (UNIX)
     set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
     set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR})
     set(CPACK_PACKAGE_VERSION_PATCH ${PROJECT_VERSION_PATCH})
-    set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "My application")
+    set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "fashio_mnist application")
     set(CPACK_DEBIAN_PACKAGE_MAINTAINER "My Corporation")
     include(CPack)
 endif()
